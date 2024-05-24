@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #FBFBFB;
+    background-color: #F3F1F1;
 }
 
 nav {
@@ -200,4 +200,84 @@ footer .pfft a{
 
 footer .pfft a:hover{
     color: gray;
+}
+
+.wrap{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.top{
+    margin-top: 5vh;
+    display: flex;
+    width: 75%;
+    height: 12vh;
+    font-weight: bold;
+    font-size: 8vh;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    box-shadow: 0 0.5vh 4px #dfe2ec, 0 -0.5vh 4px #dfe2ec, -0.5vh 0 4px #dfe2ec,  0.5vh 0 4px #dfe2ec;  
+    border-radius: 25px; 
+    background-color: #F5F3F3;
+}
+
+.list{
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    color: white;
+    gap: 5vw 5vh;
+    flex-wrap: wrap;
+}
+
+.breakfast{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vh;
+    font-weight: bold;
+    height: 50vh;
+    width: 20vw;
+    background:linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)), url('../Assets/breakfast.png');
+    background-size: cover; 
+    background-position: center; 
+    transition: transform 0.3s ease-in-out;
+}
+.lunch{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vh;
+    font-weight: bold;
+    height: 50vh;
+    width: 20vw;
+    background:linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)), url('../Assets/lunch.png');
+    background-size: cover; 
+    background-position: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.dinner{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vh;
+    font-weight: bold;
+    height: 50vh;
+    width: 20vw;
+    background:linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)), url('../Assets/dinner.png');
+    background-size: cover; 
+    background-position: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.lunch:hover,.breakfast:hover,.dinner:hover {
+    transform: scale(1.1); 
 }

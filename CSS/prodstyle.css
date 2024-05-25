@@ -197,21 +197,13 @@ footer .pfft a:hover{
     border-radius: 25px; 
     background-color: #F5F3F3;
 }
-.appetizers{
+
+.category{
     margin-top: 6vh;
     margin-left: 2vw;
     font-size: 3vh;
 }
-.desserts{
-    margin-top: 6vh;
-    margin-left: 2vw;
-    font-size: 3vh;
-}
-.beverages{
-    margin-top: 6vh;
-    margin-left: 2vw;
-    font-size: 3vh;
-}
+
 .list {
     margin-left: 0.2vw;
     display: grid;

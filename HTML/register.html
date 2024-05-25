@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../CSS/registerstyle.css">
+    <script src="../js/validate.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="../Assets/dog.png" alt="" class="logo">
+        <ul>
+            <li><a href="../HTML/home.html">Home</a></li>
+            <li><a href="../HTML/products.html">Products</a></li>
+            <li><a href="../HTML/testimonials.html">Testimonial</a></li>
+            <li><a href="../HTML/about.html">About Us</a></li>
+            <register-link><a href="../HTML/register.html">Register</a></register-link>
+    </nav>
+
+    <section>
+        <div class = "login-form">
+            <div class = "container">
+                <div class = "main">
+                    <div class = "content">
+                        <h2>Account Register</h2>
+                        <form action="../HTML/home.html" method="post" onsubmit = "return validate_reg_form()">
+                            <h3>Name</h3>
+                            <input type="text" name = "name" autofocus ="" placeholder="Enter Name">
+                            <h3>E-mail</h3>
+                            <input type="email" name ="email"   autofocus ="" placeholder="Enter E-mail">
+                            <h3>Address</h3>
+                            <input type="text" name ="address"   autofocus ="" placeholder="Enter Address">
+                            <h3>Gender</h3>
+                            <select name="gender"  autofocus>
+                                <option value="" disabled selected>None</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                            </select>
+                            <h3>Date of Birth</h3>
+                            <input type="date" name = "date"  autofocus = "">
+                            <button class = "btn" type = "submit"> 
+                                Register
+                            </button>
+                        </form>
+                    </div>
+                    <div class="form-img">
+                        <img src="../Assets/dog.png" alt="">
+                        <h1 style="color: white;">CAteriNgz</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="name">CAteriNgz</div>
+        <div class="vertical"></div> 
+        <div class="hmm">
+            <p>© 2024 CAteriNgz Inc, made by HEEEHEHEEHEHEEH</p>
+        </div>
+        <div class="pfft">
+            <a href="#"><p>English</p></a>
+            <div class="vertical"></div>
+            <a href="#"><p>Indonesian</p></a>
+        </div>
+    </footer>
+</body>
+
+</html>

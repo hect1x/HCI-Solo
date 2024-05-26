@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: Arial, sans-serif;
     background-color: #F3F1F1;
 }
@@ -116,12 +117,6 @@ nav a {
     text-decoration: none; 
 }
 @media (max-width: 768px) {
-    section{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .normal .hide, .hmm, .vertical, #rmv{
         display: none;
     }
@@ -141,7 +136,10 @@ nav a {
         right: 0;
     }
     footer{
+        display: flex;
         justify-content: center;
+        align-items: center;
+        margin: 0;
     }
     .logo{
         border-radius: 50%;
@@ -151,30 +149,6 @@ nav a {
         position: fixed; 
         left: 1.2vw;
     }
-    .top h2{
-        font-size: 2.5vh;
-    }
-
-    .person1 {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .person1 img {
-        min-width: 340px;
-        margin-left: 0vw !important;
-    }
-
-    .message {
-        width: 100%;
-        margin-top: 20vh;
-    }
-    .message {
-        min-width: 340px;
-        min-height: 300px;
-        margin-left: 0vw !important;
-    }
 }
 
 header{
@@ -182,10 +156,11 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #FAF9F9;
-    margin-top: 10vh;
+    margin-top: 8vh;
     box-shadow: 0.5vh 0.5vw 4px #dfe2ec;
     width: 100%;
     height: 13vh;
+    position: absolute;
 }
 header h2{
     font-size: 4vh;
@@ -232,62 +207,4 @@ footer .vertical {
 footer .hmm{
     margin-left: 3vw;
 }
-.wrap{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.top{
-    margin-top: 10vh;
-    display: flex;
-    width: 50%;
-    height: 12vh;
-    font-weight: bold;
-    font-size: 4vh;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    box-shadow: 0 0.5vh 4px #dfe2ec, 0 -0.5vh 4px #dfe2ec, -0.5vh 0 4px #dfe2ec,  0.5vh 0 4px #dfe2ec;  
-    border-radius: 25px; 
-    background-color: #F5F3F3;
-}
-.temp {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-    /* justify-content: center; */
-}
 
-.person1 {
-    display: flex; 
-    align-items: center; 
-    justify-content: left;
-}
-
-.person1 img {
-    width: 25vw;
-    height: 70vh;
-    margin-left: 5vw;
-    border-radius: 30px;
-}
-
-.person1 .message {
-    display: flex;
-    flex-direction: column;
-    margin-left: 6vw;
-    width: 50%;
-    justify-content: center;
-    text-align: center;
-    border-radius: 30px;
-    height: 30vh;
-    padding: 2vw 2vh;
-    box-shadow: 0 0.5vh 4px #dfe2ec, 0 -0.5vh 4px #dfe2ec, -0.5vh 0 4px #dfe2ec,  0.5vh 0 4px #dfe2ec;
-}
-
-.separate{
-    width: 100%;
-    background-color: black;
-    height: 20vh;
-}

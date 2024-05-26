@@ -5,17 +5,28 @@
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="../CSS/registerstyle.css">
+    <script src="../js/mobile.js"></script>
     <script src="../js/validate.js"></script>
 </head>
 <body>
     <nav>
         <img src="../Assets/dog.png" alt="" class="logo">
-        <ul>
+        <ul class="burger">
+            <li class="cross" onclick="hideBurger();" ><a href=""><img src="../Assets/cross.png" alt=""></a></li>
             <li><a href="../HTML/home.html">Home</a></li>
             <li><a href="../HTML/products.html">Products</a></li>
             <li><a href="../HTML/testimonials.html">Testimonial</a></li>
             <li><a href="../HTML/about.html">About Us</a></li>
-            <register-link><a href="../HTML/register.html">Register</a></register-link>
+            <li><a href="../HTML/register.html">Register</a></li>
+        </ul>
+        <ul class="normal">
+            <li class="hide"><a href="../HTML/home.html">Home</a></li>
+            <li class="hide"><a href="../HTML/products.html">Products</a></li>
+            <li class="hide"><a href="../HTML/testimonials.html">Testimonial</a></li>
+            <li class="hide"><a href="../HTML/about.html">About Us</a></li>
+            <li class="hide"><a href="../HTML/register.html">Register</a></li>
+            <li onclick="showBurger(); return false;"><a href=""><img src="../Assets/burger.jpg" alt="" class="burcon"></a></li>
+        </ul>
     </nav>
 
     <section>
@@ -44,7 +55,7 @@
                             </button>
                         </form>
                     </div>
-                    <div class="form-img">
+                    <div class="form-img" id="rmv">
                         <img src="../Assets/dog.png" alt="">
                         <h1 style="color: white;">CAteriNgz</h1>
                     </div>
@@ -58,11 +69,6 @@
         <div class="vertical"></div> 
         <div class="hmm">
             <p>© 2024 CAteriNgz Inc, made by HEEEHEHEEHEHEEH</p>
-        </div>
-        <div class="pfft">
-            <a href="#"><p>English</p></a>
-            <div class="vertical"></div>
-            <a href="#"><p>Indonesian</p></a>
         </div>
     </footer>
 </body>

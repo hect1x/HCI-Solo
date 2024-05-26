@@ -38,7 +38,7 @@ function validate_reg_form(){
     const dateTemp = new Date(date);
     const currDate = new Date();
     if (dateTemp > currDate) {
-        alert("Date of birth cannot later than current date.");
+        alert("Date of birth cannot be later than current date.");
         dateinp.focus();
         return false;
     }

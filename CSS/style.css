@@ -5,6 +5,7 @@ html, body {
     background-color: #F3F1F1;
 }
 
+
 nav {
     height: 10vh;
     position: fixed;
@@ -13,12 +14,12 @@ nav {
     top: 0;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     z-index: 999; 
     align-items: center;
 }
 
-ul {
+.normal {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -26,7 +27,7 @@ ul {
     align-items: center;
 }
 
-ul li {
+.normal li {
     display: inline-block;
     padding-inline: 2vw;
     font-size: 2vh;
@@ -34,16 +35,16 @@ ul li {
     position: relative; 
 }
 
-ul li a {
+.normal li a {
     color: white;
     text-decoration: none;
 }
 
-ul li a:hover{
+.normal li a:hover{
     color: gray;
 }
 
-ul li:hover::after {
+.normal li:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -53,34 +54,41 @@ ul li:hover::after {
     background-color: white;
 }
 
-ul register-link {
-    text-decoration: none;
-    font-size: 2vh;
-    padding-inline: 1vw;
-    position: fixed; 
-    right: 2vw; 
-    color: white;
-}
 
-ul register-link a {
-    text-decoration: none;
-    color: white;
-}
-
-ul register-link a:hover{
-    color: gray;
-}
-ul register-link:hover::after {
-    content: '';
-    color: gray;
-    position: absolute;
-    left: 0;
-    bottom: -1px; 
+.burger{
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
     width: 100%;
-    height: 1px;
-    background-color: white;
+    z-index: 10000;
+    background: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.burger li{
+    display: flex;
+    text-decoration: none;
+    padding: 4vh;
+}
+
+.burger a{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.cross img{
+    width: 8vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .logo{
     border-radius: 50%;
     max-width: 4.5%;
@@ -89,9 +97,71 @@ ul register-link:hover::after {
     position: fixed; 
     left: 0.8vw;
 }
+
+.burcon {
+    height: 10vh;
+    width: 5vw;
+    display: none;
+}
+
+.burcon img{
+    width: 8vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 nav a {
     color: white; 
     text-decoration: none; 
+}
+@media (max-width: 768px) {
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .top{
+        font-size: 3.5vh;
+    }
+    .normal .hide, .hmm, .vertical, #rmv{
+        display: none;
+    }
+    header h2{
+        padding: 2vw;
+    }
+    .burcon {
+        display: block; 
+        height: 10vh;
+        width: 12vw;
+    }
+    .cross img{
+        width: 15vw;
+        height: 10vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    footer{
+        justify-content: center;
+    }
+    .logo{
+        border-radius: 50%;
+        max-width: 15vw;
+        display: flex;
+        align-items: center;
+        position: fixed; 
+        left: 1.2vw;
+    }
+
+    .breakfast,.lunch,.dinner{
+        margin-top: 2vh;
+    }
+
+    .brief-info .cover h2{
+        font-size: 2vh;
+    }
 }
 
 header{
@@ -114,31 +184,6 @@ header .vertical {
     width: 1px;
     height: 50px;
     background-color: black; 
-}
-
-.brief-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-    width: 100%;
-    height: 60vh;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../Assets/brief1.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    color: white; 
-}
-
-.brief-info .cover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(128, 128, 128, 0.5);
-    width: 30vw;
-    height: 6vh;
-    border-radius: 15px;
-    font-size: 1.8vh;
-    
 }
 section{
     margin-top: 1vh;
@@ -175,33 +220,33 @@ footer .hmm{
     margin-left: 3vw;
 }
 
-footer .pfft {
-    display: flex; 
-    align-items: center;  
-    margin-left: auto;
-    margin-right: 2vw;
-    color: white;
-}
 
-
-footer .pfft .vertical {
-    right: 0;
-    width: 1px;
-    height: 20px;
-    background-color: white;
-    margin: 1.5vw; 
-}
-
-footer .pfft a{
+.brief-info{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: white;
+    margin-top: 5vh;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../Assets/brief1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
 }
 
-footer .pfft a:hover{
-    color: gray;
+.brief-info .cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 30vw;
+    min-width: 200px;
+    height: 6vh;
+    border-radius: 15px;
+    font-size: 1.8vh;
+    text-align: center;
+    
 }
-
 .wrap{
     display: flex;
     width: 100%;
@@ -238,7 +283,7 @@ footer .pfft a:hover{
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    min-width: 15vh;
+    min-width: 340px;
     font-weight: bold;
     height: 50vh;
     width: 20vw;
@@ -252,7 +297,7 @@ footer .pfft a:hover{
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    min-width: 15vh;
+    min-width: 340px;
     font-weight: bold;
     height: 50vh;
     width: 20vw;
@@ -268,7 +313,7 @@ footer .pfft a:hover{
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    min-width: 15vh;
+    min-width:340px;
     font-weight: bold;
     height: 50vh;
     width: 20vw;
